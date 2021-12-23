@@ -92,16 +92,17 @@ a {
 
 /* pop up */
 #modal-container {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: 900px;
+  height: 100vh;
   background-color: rgba(82.7, 82.7, 82.7, 0.7);
   backdrop-filter: blur(5px);
   padding-top: 60px;
   z-index: 2;
   margin: 0;
+  overflow: auto;
 }
 
 .fa-times {
@@ -142,7 +143,7 @@ a {
   border: solid 2px rgb(185, 155, 19);
   background-color: #8597b1;
   padding: 12px;
-  margin: 6px;
+  margin: 6px 6px 74px 6px;
   border-radius: 8px;
   color: #fff;
 }
