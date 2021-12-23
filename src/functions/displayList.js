@@ -2,7 +2,7 @@ import { getMealsList } from './mealsApi.js';
 
 const mealsList = document.querySelector('#main-page');
 
-const displayList = async () => {
+export default async () => {
   const data = await getMealsList();
   let htmlCode = '';
   data.meals.forEach((item) => {
@@ -14,13 +14,12 @@ const displayList = async () => {
                 <p><i class="fas fa-heart"></i> 0 Likes</p>
             </div>
             <div id='btns'>
-                <button id='comment-btn'><i class="fas fa-comment"></i> Comments</button>
-                <button id='reservation-btn'><i class="fas fa-ticket-alt"></i> Reservations</button>
+                <button id=${item.idMeal} class='comment-btn'><i class="fas fa-comment"></i> Comments</button>
             </div>
         </div>
       `;
   });
   mealsList.innerHTML = htmlCode;
-};
 
-export default displayList;
+  return document.querySelectorAll('.comment-btn');
+};
