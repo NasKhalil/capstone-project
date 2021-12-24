@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import getLikes from './getLikes.js';
 import postLikes from './postLikes.js';
 import addComment from './addComment.js';
@@ -8,11 +9,11 @@ const mealDetailsContent = document.querySelector('.meal-details-content');
 const closeBtn = document.querySelector('.recipe-close-btn');
 
 class Meals {
-  static showDish = (meal) => {
-    const board = document.getElementById('board');
-    const dish = document.createElement('div');
-    dish.className = 'col-md-4 col-sm-6 col-xs-6 card d-flex my-1 p-4';
-    dish.innerHTML = `<img src=${meal.strMealThumb} alt="${meal.strMeal}">
+    static showDish = (meal) => {
+      const board = document.getElementById('board');
+      const dish = document.createElement('div');
+      dish.className = 'col-md-4 col-sm-6 col-xs-6 card d-flex my-1 p-4';
+      dish.innerHTML = `<img src=${meal.strMealThumb} alt="${meal.strMeal}">
         <div class="d-flex align-baseline justify-content-between py-2">
           <h2 class="col-9">${meal.strMeal}</h2>
           <div class="col-3 text-decoration-none text-reset counter" id=${meal.idMeal}>&#10084;&#65039; 0</div>
@@ -23,26 +24,26 @@ class Meals {
         <input type="submit" name="reservations" id="reservation-0" value="Reservations"
           class="btn reserve  text-light my-2 btn-block">
     `;
-    board.appendChild(dish);
-    document.getElementById(meal.idMeal).addEventListener('click', () => {
-      Meals.getRecipe(meal.idMeal);
-    });
-  };
+      board.appendChild(dish);
+      document.getElementById(meal.idMeal).addEventListener('click', () => {
+        Meals.getRecipe(meal.idMeal);
+      });
+    };
 
-  static showBoard = (list) => {
-    const mealBoard = document.getElementById('board');
-    list.forEach((dish) => {
-      Meals.showDish(dish);
-    });
-    mealBoard.addEventListener('click', (e) => {
-      if (e.target.classList.contains('counter')) {
-        postLikes(e.target.id);
-        setTimeout(() => {
-          getLikes();
-        }, 1000);
-      }
-    });
-  };
+    static showBoard = (list) => {
+      const mealBoard = document.getElementById('board');
+      list.forEach((dish) => {
+        Meals.showDish(dish);
+      });
+      mealBoard.addEventListener('click', (e) => {
+        if (e.target.classList.contains('counter')) {
+          postLikes(e.target.id);
+          setTimeout(() => {
+            getLikes();
+          }, 1000);
+        }
+      });
+    };
 }
 
 const getComment = async (item) => {
