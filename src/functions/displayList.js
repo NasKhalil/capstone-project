@@ -90,8 +90,8 @@ const mealPopUp = async (meal) => {
     </div>
     <h3 class="m-3">Add a comment</h3>
     <form autocomplete="off" class="form-class">
-      <input type="text" class="form-control" id="commentator" required placeholder="Your name">
-      <textarea id="comment" name="comment" cols="30" rows="10" required placeholder="Your comment..."></textarea>
+      <input type="text" class="form-control" id="commentator" required placeholder="Your name" required>
+      <textarea id="comment" name="comment" cols="30" rows="10" required placeholder="Your comment..." required></textarea>
       <button type="button" class="btn commentBtn">Comment</button>
     </form>
 
