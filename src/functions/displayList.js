@@ -26,7 +26,7 @@ export default async () => {
   const likeNumber = document.querySelectorAll('.likeNumber');
   likeButton.forEach((element, index) => {
     element.addEventListener('click', async () => {
-      await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/s01zcq66FTJkk56FIxxy/likes', {
+      await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vkGMD7UlcUJL5hx4gyle/likes', {
         method: 'POST',
         body: JSON.stringify({
           item_id: `item${index}`,

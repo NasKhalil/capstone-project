@@ -11,7 +11,7 @@ const getItem = async (id) => {
 };
 
 const getLikes = async () => {
-  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/s01zcq66FTJkk56FIxxy/likes');
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vkGMD7UlcUJL5hx4gyle/likes');
   const likeArr = await response.json();
   return likeArr;
 };
