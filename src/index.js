@@ -1,22 +1,12 @@
-import './style.css';
-import displayList from './functions/displayList.js';
-import comment from './functions/comment.js';
-import getAllItemsCount from './functions/getAllItemsCount.js';
+/* eslint-disable import/no-cycle */
+import './functions/commentstyle.css';
+import './styles.css';
+import Logo from './functions/images/meal-logo.png';
+import getMeals from './functions/mealsApi.js';
+import getLikes from './functions/getLikes.js';
 
-window.addEventListener('load', async () => {
-  const commentBtn = await displayList();
+const logoLink = document.getElementById('logo');
+logoLink.src = Logo;
 
-  commentBtn.forEach(async (btn) => {
-    btn.addEventListener('click', () => {
-      comment(btn);
-    });
-  });
-
-  document.addEventListener('click', async (e) => {
-    if (e.target.matches('.fas.fa-heart')) {
-      const like = Number(e.target.nextSibling.textContent.match(/[0-9]/g).join(''));
-      e.target.nextSibling.textContent = `${like + 1} likes`;
-    }
-  });
-  getAllItemsCount();
-});
+document.addEventListener('DOMContentLoaded', getMeals());
+document.addEventListener('DOMContentLoaded', getLikes());
