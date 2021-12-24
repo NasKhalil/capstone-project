@@ -1,103 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pushster&display=swap');
+
 body {
-    font-family: 'Bebas Neue', cursive;
-    margin: 0;
-    padding: 0;
-    color: #000;
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  padding: 0;
+  color: #000;
 }
 
 nav {
-    width: 100%;
-    background-color: #23180d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  background-color: #23180d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    font-size: 32px;
-    gap: 32px;
-    padding: 24px;
-    margin: 0 0 0 64px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  gap: 32px;
+  padding: 24px;
+  margin: 0 0 0 64px;
 }
 
 #logo {
-    color: rgb(185, 155, 19);
-    font-family: 'Pushster', cursive;
-    font-size: 32px;
+  color: rgb(185, 155, 19);
+  font-family: 'Pushster', cursive;
+  font-size: 32px;
 }
 
 a {
-    text-decoration: none;
-    color: #e6d8d8;
+  text-decoration: none;
+  color: #e6d8d8;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 16px 44px 74px 44px;
+#main-page {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 16px 44px 74px 44px;
 }
 
 #card {
-    border: #23180d solid 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: auto;
-    overflow: hidden;
-    padding: 8px;
-    margin: 12px;
+  border: #23180d solid 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  overflow: hidden;
+  padding: 8px;
+  margin: 12px;
 }
 
 #card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 #description {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 #btns {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 #comment-btn {
-    border: #23180d solid 1px;
-    border-radius: 8px;
-    background: none;
-    width: 150px;
-    height: 25px;
-    cursor: pointer;
+  border: #23180d solid 1px;
+  border-radius: 8px;
+  background: none;
+  width: 150px;
+  height: 25px;
+  cursor: pointer;
 }
 
 #reservation-btn {
-    border: #23180d solid 1px;
-    border-radius: 8px;
-    background: none;
-    width: 150px;
-    height: 25px;
+  border: #23180d solid 1px;
+  border-radius: 8px;
+  background: none;
+  width: 150px;
+  height: 25px;
 }
 
+/* pop up */
+#modal-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(82.7, 82.7, 82.7, 0.7);
+  backdrop-filter: blur(5px);
+  padding-top: 60px;
+  z-index: 2;
+  margin: 0;
+  overflow: auto;
+}
+
+.fa-times {
+  position: absolute;
+  right: 5%;
+  color: #fff;
+  font-size: 26px;
+}
+
+#popup-img {
+  width: 25%;
+}
+
+#meal-info,
+#comment-container,
+#add-comment-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input-name,
+#comment-text {
+  width: 200px;
+  margin: 6px;
+  border: solid 2px rgb(185, 155, 19);
+  background-color: #8597b1;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+#input-name::placeholder,
+#comment-text::placeholder {
+  color: #fff;
+}
+
+#comment-add {
+  border: solid 2px rgb(185, 155, 19);
+  background-color: #8597b1;
+  padding: 12px;
+  margin: 6px 6px 74px 6px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+/* pop up */
+
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #23180d;
-    color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #23180d;
+  color: #fff;
 }
 
 footer p {
-    padding: 8px;
+  padding: 8px;
 }

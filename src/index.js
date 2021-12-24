@@ -1,11 +1,17 @@
-/* eslint-disable */
 import './style.css';
 import displayList from './functions/displayList.js';
-import addLike from './functions/likes.js';
+import comment from './functions/comment.js';
 
+window.addEventListener('load', async () => {
+  const commentBtn = await displayList();
 
+  commentBtn.forEach(async (btn) => {
+    btn.addEventListener('click', () => {
+      comment(btn);
+    });
+  });
 
-document.addEventListener('click', async(e) => {
+  document.addEventListener('click', async(e) => {
     if (e.target.matches('.fas.fa-heart')) {
 
         const item_id = Number(e.target.idMeal)
@@ -14,4 +20,4 @@ document.addEventListener('click', async(e) => {
         //await addLike(item_id);
     }
 })
-displayList();
+});
