@@ -122,7 +122,8 @@ a {
 
 #meal-info,
 #comment-container,
-#add-comment-section {
+#add-comment-section,
+#comment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
