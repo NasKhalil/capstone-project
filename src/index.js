@@ -1,6 +1,7 @@
 import './style.css';
 import displayList from './functions/displayList.js';
 import comment from './functions/comment.js';
+import getAllItemsCount from './functions/getAllItemsCount.js';
 
 window.addEventListener('load', async () => {
   const commentBtn = await displayList();
@@ -17,4 +18,6 @@ window.addEventListener('load', async () => {
       e.target.nextSibling.textContent = `${like + 1} likes`;
     }
   });
+
+  getAllItemsCount();
 });

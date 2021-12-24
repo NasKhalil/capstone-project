@@ -56,6 +56,10 @@ a {
   margin: 12px;
 }
 
+#items-count {
+  text-align: center;
+}
+
 #card img {
   width: 100%;
   height: auto;
