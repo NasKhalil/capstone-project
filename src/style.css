@@ -153,6 +153,11 @@ a {
   color: #fff;
 }
 
+#comment-section div {
+  display: flex;
+  gap: 6px;
+}
+
 /* pop up */
 
 footer {

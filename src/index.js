@@ -18,6 +18,5 @@ window.addEventListener('load', async () => {
       e.target.nextSibling.textContent = `${like + 1} likes`;
     }
   });
-
   getAllItemsCount();
 });
