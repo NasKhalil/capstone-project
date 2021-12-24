@@ -16,4 +16,20 @@ const getLikes = async () => {
   return likeArr;
 };
 
-module.exports = { getMealsList, getItem, getLikes };
+const sendComment = async (id, uName, uComment) => {
+  await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vkGMD7UlcUJL5hx4gyle/comments', {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: `item${id}`,
+      username: uName,
+      comment: uComment,
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+};
+
+module.exports = {
+  getMealsList, getItem, getLikes, sendComment,
+};

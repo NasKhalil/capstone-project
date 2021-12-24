@@ -1,4 +1,4 @@
-import { getItem } from './mealsApi.js';
+import { getItem, sendComment } from './mealsApi.js';
 
 const commPopup = document.getElementById('comment-pop-up');
 
@@ -25,14 +25,17 @@ export default async (btn) => {
                 </div>
             </div>
             <div id="comment-container">
-                <div id='comment-title'>
-                    <h2>Comments </h2>
+                <h2>Comments</h2>
+                <div id='comment-section'>
+                    
                 </div>
                 <div id='add-comment-section'>
                     <h4>Add a comment</h4>
-                    <input type="text" id='input-name' placeholder='Your name'>
-                    <textarea name="message" id="comment-text" placeholder='Your insights' cols="25" rows="5"></textarea>
-                    <button type="button" id="comment-add">Comment</button>
+                    <form id='comment-form'>
+                      <input type="text" id='input-name' placeholder='Your name'>
+                      <textarea name="message" id="comment-text" placeholder='Your insights' cols="25" rows="5"></textarea>
+                      <button type="submit" id="comment-add">Comment</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -40,6 +43,16 @@ export default async (btn) => {
     commPopup.innerHTML = popUp;
     return commPopup.innerHTML;
   });
+
+  const form = document.querySelector('#comment-form');
+  form.addEventListener('submit', async (event) => {
+    const UserName = document.querySelector('#input-name').value;
+    const UserComment = document.querySelector('#comment-text').value;
+    event.preventDefault();
+    sendComment(btn.id, UserName, UserComment);
+  });
+
+  form.reset();
 
   commPopup.style.display = 'block';
 
