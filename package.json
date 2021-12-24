@@ -23,6 +23,7 @@
     "description": "",
     "version": "1.0.0",
     "private": true,
+    "homepage": "https://naskhalil.github.io/capstone-project/",
     "dependencies": {
         "acorn": "^8.5.0",
         "acorn-import-assertions": "^1.8.0",
@@ -124,7 +125,6 @@
         "predeploy": "npm run build",
         "deploy": "gh-pages -d dist"
     },
-    "homepage": "https://naskhalil.github.io/capstone-project/",
     "keywords": [],
     "author": "",
     "license": "ISC"

@@ -111,7 +111,7 @@ const mealPopUp = async (meal) => {
         comment,
       };
       addComment(newComment);
-    } else alert('Empty fields are not allowed');
+    }
     document.querySelector('#commentator').value = '';
     document.querySelector('#comment').value = '';
     setTimeout(() => {
