@@ -30,6 +30,12 @@ const sendComment = async (id, uName, uComment) => {
   });
 };
 
+const getComments = async (id) => {
+  const response = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/vkGMD7UlcUJL5hx4gyle/comments?item_id=item${id}`);
+  const commentArr = await response.json();
+  return commentArr;
+};
+
 module.exports = {
-  getMealsList, getItem, getLikes, sendComment,
+  getMealsList, getItem, getLikes, sendComment, getComments,
 };
