@@ -7,6 +7,7 @@
         "eslint-config-airbnb-base": "^14.2.1",
         "eslint-plugin-import": "^2.25.3",
         "hint": "^6.1.6",
+        "html-loader": "^3.0.1",
         "html-webpack-plugin": "^5.5.0",
         "jest": "^27.4.3",
         "style-loader": "^3.3.1",
@@ -51,6 +52,7 @@
         "find-up": "^4.1.0",
         "function-bind": "^1.1.1",
         "get-stream": "^6.0.1",
+        "gh-pages": "^3.2.3",
         "glob-to-regexp": "^0.4.1",
         "graceful-fs": "^4.2.8",
         "has": "^1.0.3",
@@ -118,12 +120,12 @@
         "test": "jest --coverage",
         "watch": "webpack --watch",
         "start": "webpack serve --open",
-        "build": "webpack"
+        "build": "webpack",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
-
+    "homepage": "https://naskhalil.github.io/capstone-project/",
     "keywords": [],
     "author": "",
     "license": "ISC"
-
-
 }
