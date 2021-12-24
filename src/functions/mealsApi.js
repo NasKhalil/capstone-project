@@ -10,4 +10,10 @@ const getItem = async (id) => {
   return data;
 };
 
-module.exports = { getMealsList, getItem };
+const getLikes = async () => {
+  const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/s01zcq66FTJkk56FIxxy/likes');
+  const likeArr = await response.json();
+  return likeArr;
+};
+
+module.exports = { getMealsList, getItem, getLikes };

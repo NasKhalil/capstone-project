@@ -10,4 +10,11 @@ window.addEventListener('load', async () => {
       comment(btn);
     });
   });
+
+  document.addEventListener('click', async (e) => {
+    if (e.target.matches('.fas.fa-heart')) {
+      const like = Number(e.target.nextSibling.textContent.match(/[0-9]/g).join(''));
+      e.target.nextSibling.textContent = `${like + 1} likes`;
+    }
+  });
 });
