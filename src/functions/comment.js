@@ -24,7 +24,7 @@ export default async (btn) => {
                 </div>
             </div>
             <div id="comment-container">
-                <h2>Comments</h2>
+                <h2>Comments(${commentsArr.length})</h2>
                 <div id='comment-section'>
                     
                 </div>
